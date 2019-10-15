@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bmi Calculator</title>     
+</head>
+<body>
+  <h2>Bielzinho's bmi Calculator</h2>
+  
+  <form action="" name="formBmi" onsubmit="return false">
+    <label>Weight:</label>
+    <br>
+    <input type="number" name="weight" >
+    <br>
+    <label>Height:</label>
+    <br>
+    <input type="number" name="height" >
+    <br>
+    <br>
+    <div>
+      <input type="button"  onclick= CalculateBmi() value="Calculate">
+      <input type="reset">
+    </div>
+    <!-- <label>Result:<input disabled type="text" name="result"></label> -->
+    <label>Result:
+      <span id="result"></span>
+    </label>
+  </form> 
+  
+  <script>  
+    function CalculateBmi(){
+      
+
+      const weightNode = document.getElementsByName("weight")[0];
+      const heigthNode = document.getElementsByName("height")[0];
+      const weight = parseFloat(weightNode.value) 
+      const height = parseFloat(heigthNode.value) 
+      
+             
+
+      var bmi = weight/(heigth*heigth);
+      
+      document.querySelector("#result").innerHTML = imc.toFixed(2);
+    }
+    
+  </script>
+</body>
